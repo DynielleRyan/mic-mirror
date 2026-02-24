@@ -45,39 +45,3 @@ For client-only development (media APIs work in browser):
 cd client && npm run dev
 ```
 
-## Production Build & Deploy
-
-Single deployment—one build, one server:
-
-```bash
-npm run build
-npm start
-```
-
-Builds the client, bundles it into the server, and serves everything from one process. Deploy the entire project; the server serves the React app at `/` and the API at `/api/health`.
-
-## Deployment (Railway, Render, etc.)
-
-- **Build command:** `npm run build`
-- **Start command:** `npm start`
-- **Root directory:** project root
-
-Set `PORT` in your platform's environment if needed.
-
-## Environment
-
-- `PORT` – Server port (default: 5000)
-- `MONGODB_URI` – Optional MongoDB connection string (app works without it)
-
-## Browser Support
-
-Requires a modern browser with:
-- `navigator.mediaDevices.getUserMedia`
-- `navigator.mediaDevices.enumerateDevices`
-- `MediaRecorder` API
-
-**HTTPS or localhost required** for media device access.
-
-## License
-
-© Dynielle Ryan. All rights reserved.
